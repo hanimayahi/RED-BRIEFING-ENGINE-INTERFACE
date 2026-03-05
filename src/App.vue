@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+import { useBabylonScene } from "@/composables/useBabylonScene";
+
+const renderCanvas = ref<HTMLCanvasElement | null>(null);
+useBabylonScene(renderCanvas);
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main class="app-root">
+    <canvas ref="renderCanvas" class="render-canvas"></canvas>
+  </main>
 </template>
-
-<style scoped></style>

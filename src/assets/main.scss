@@ -1,0 +1,27 @@
+$full-size: 100%;
+
+@mixin fill-parent($display: null) {
+  width: $full-size;
+  height: $full-size;
+
+  @if $display != null {
+    display: $display;
+  }
+}
+
+html,
+body,
+#app {
+  @include fill-parent;
+  margin: 0;
+}
+
+.app-root {
+  @include fill-parent;
+  overflow: hidden;
+}
+
+.render-canvas {
+  @include fill-parent(block);
+  touch-action: none;
+}
