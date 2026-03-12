@@ -10,21 +10,21 @@ class GroundGrid {
     }
 
     const width = this.cellSizeMeters * x;
-    const depth = this.cellSizeMeters * y;
+    const height = this.cellSizeMeters * y;
     const halfWidth = width / 2;
-    const halfDepth = depth / 2;
+    const halfHeight = height / 2;
 
     for (let i = -halfWidth; i <= halfWidth; i += this.cellSizeMeters) {
       this.lines.push([
-        new BABYLON.Vector3(i, 0, -halfDepth),
-        new BABYLON.Vector3(i, 0, halfDepth),
+        new BABYLON.Vector3(i, -halfHeight, 0),
+        new BABYLON.Vector3(i, halfHeight, 0),
       ]);
     }
 
-    for (let i = -halfDepth; i <= halfDepth; i += this.cellSizeMeters) {
+    for (let i = -halfHeight; i <= halfHeight; i += this.cellSizeMeters) {
       this.lines.push([
-        new BABYLON.Vector3(-halfWidth, 0, i),
-        new BABYLON.Vector3(halfWidth, 0, i),
+        new BABYLON.Vector3(-halfWidth, i, 0),
+        new BABYLON.Vector3(halfWidth, i, 0),
       ]);
     }
   }

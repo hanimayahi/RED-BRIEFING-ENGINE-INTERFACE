@@ -8,6 +8,7 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
+    "knip": "knip",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "run-s lint:*",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "babylonjs": "^8.54.1",
+    "babylonjs-loaders": "^8.54.1",
     "pinia": "^3.0.4",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3"
@@ -36,6 +38,7 @@
     "eslint-plugin-vue": "~10.8.0",
     "jiti": "^2.6.1",
     "jsdom": "^28.1.0",
+    "knip": "^5.86.0",
     "npm-run-all2": "^8.0.4",
     "oxlint": "~1.50.0",
     "prettier": "3.8.1",

@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/knip/schema.json",
+  "project": ["src/**/*.ts"],
+  "oxlint": false,
+  "vitest": {
+    "entry": ["src/__tests__/**/*.ts"],
+    "project": ["src/__tests__/**/*.ts"]
+  }
+}
